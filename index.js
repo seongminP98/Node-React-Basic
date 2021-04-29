@@ -21,8 +21,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/register',(req,res)=>{
-    const user = new User(req.body) //mongoDB에서오는 메소드. save()해두면 정보들이 user model에 저장이됨.
-    user.save((err, userInfo)=>{
+    const user = new User(req.body) 
+    user.save((err, userInfo)=>{    //mongoDB에서오는 메소드. save()해두면 정보들이 user model에 저장이됨.
         if(err){
             return res.json({success: false.err})
         }
