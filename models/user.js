@@ -30,6 +30,6 @@ const userSchema = mongoose.Schema({ //유저 스키마
     }
 })
 
-const user = mongoose.model('User',userSchema) //유저 모델 (모델이름, 스키마)
+const User = mongoose.model('User',userSchema) //유저 모델 (모델이름, 스키마)
 
-module.export = {user};
+module.exports = {User};
