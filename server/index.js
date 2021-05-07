@@ -1,6 +1,6 @@
 const express = require('express') //npm install express --save
 const app = express()
-const port = 3000
+const port = 5000
 const mongoose = require('mongoose'); //npm install mongoose --save
 const {User} = require('./models/User');
 const config = require('./config/key');
@@ -21,6 +21,10 @@ mongoose.connect(config.mongoURI,{
 
 app.get('/', (req, res) => {
   res.send('Hello World@@~~!')
+})
+
+app.get('/api/hello',(req,res)=>{
+    res.send("Hello world!~")
 })
 
 app.post('/api/users/register',(req,res)=>{
